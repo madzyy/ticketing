@@ -38,6 +38,7 @@ export default function Header(){
             <SearchBar />
           </div>
 
+          {/* desktop action buttons */}
           <div className="hidden lg:block ml-auto">
             <SignedIn>
               <div className="flex items-center gap-3">
@@ -53,6 +54,23 @@ export default function Header(){
                   </button>
                 </Link>
               </div>
+            </SignedIn>
+          </div>
+
+          {/* mobile action buttons */}
+          <div className="lg:hidden w-full flex justify-center gap-3">
+            <SignedIn>
+              <Link href="/seller" className="flex-1">
+                <button className="w-full bg-blue-600 text-white px-3 py-1.5 text-sm rounded-lg hover:bg-blue-700 transition">
+                  Sell Tickets
+                </button>
+              </Link>
+
+              <Link href="/tickets" className="flex-1">
+                <button className="w-full bg-gray-100 text-gray-800 px-3 py-1.5 text-sm rounded-lg hover:bg-gray-200 transition border border-gray-300">
+                  My Tickets
+                </button>
+              </Link>
             </SignedIn>
           </div>
         </div>
